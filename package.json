@@ -1,0 +1,36 @@
+{
+  "name": "shared",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./build/index.js",
+  "scripts": {
+    "dev": "vite --port 8001 --strictPort",
+    "build:try": "npm run build:mf && npm run build:npm",
+    "build": "vite build",
+    "build:npm": "babel src --out-dir build",
+    "preview": "vite preview --port 8001 --strictPort",
+    "serve": "vite preview --port 8001 --strictPort"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "7.9.6",
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "7.9.4",
+    "axios": "^1.5.1",
+    "jotai": "^2.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-fetch-hook": "^1.9.5",
+    "react-router-dom": "^6.16.0",
+    "vite-plugin-federation": "^0.0.1"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^3.0.0",
+    "vite": "^4.0.5"
+  }
+}
